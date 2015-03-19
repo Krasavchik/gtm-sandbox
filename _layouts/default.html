@@ -4,6 +4,7 @@
   {% include head.html %}
 
     <body>
+    <!-- GTM DataLayer -->
 
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KSZNXH"
@@ -15,6 +16,12 @@
     })(window,document,'script','dataLayer','GTM-KSZNXH');</script>
     <!-- End Google Tag Manager -->
 
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        dataLayer.push({
+            'pageName' : '{{ page.title }}'
+        });
+    </script>
 
     {% include header.html %}
 

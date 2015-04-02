@@ -9,9 +9,8 @@ date:   2015-04-02 14:00:00
 <script>
 (function(){
     var trackingEl = document.getElementById("tracking");
-    trackingEl.addEventListener('click', function(){
-        console.log("event tracking linked clicked");
-        ga('send', 'event', 'event tracking', 'click!', 'in the sandbox');
-    })
+    addListener(trackingEl, 'click', function() {
+        ga('send', 'event', 'button', 'click', 'nav-buttons');
+    });
 })();
 </script>

@@ -8,8 +8,5 @@ date:   2015-04-02 14:00:00
 
 <script>
     var trackingEl = document.getElementById("tracking");
-    trackingEl.addEventListener("click", function{
-        ga('send', 'event', 'category', 'action', 'label', 3);
-        console.log("click");
-    });
+    trackingEl.addEventListener("click", ga('send', 'event', 'category', 'action', 'label', 3));
 </script>

@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Setting up an event click tracking with Javascript"
+date:   2015-04-02 14:00:00
+---
+
+<a id="tracking" href="">Event tracking in javascript</a>
+
+<script>
+(function(){
+    var trackingEl = document.getElementById("tracking");
+    trackingEl.addEventListener('click', function(){
+        console.log("event tracking linked clicked");
+        ga('send', 'event', 'category', 'action', 'label');
+    })
+})();
+</script>
